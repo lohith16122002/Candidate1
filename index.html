@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlgoVision - Complete DSA Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ AlgoVision
+    </div>
+
+    <div class="tagline">
+        Master DSA through visualization
+    </div>
+
+</header>
+
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h3>DSA Library</h3>
+
+        <div class="category">
+
+            <h4>📦 Arrays</h4>
+
+            <button class="algo active" data-type="array">
+                Array Operations
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🔗 Linked Lists</h4>
+
+            <button class="algo" data-type="singly">
+                Singly Linked List
+            </button>
+
+            <button class="algo" data-type="doubly">
+                Doubly Linked List
+            </button>
+
+            <button class="algo" data-type="circular">
+                Circular Linked List
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>📚 Stack</h4>
+
+            <button class="algo" data-type="stack">
+                Stack
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🚶 Queue</h4>
+
+            <button class="algo" data-type="queue">
+                Queue
+            </button>
+
+            <button class="algo" data-type="circularQueue">
+                Circular Queue
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🌳 Trees</h4>
+
+            <button class="algo" data-type="bst">
+                Binary Search Tree
+            </button>
+
+            <button class="algo" data-type="treeTraversal">
+                Tree Traversal
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🕸 Graphs</h4>
+
+            <button class="algo" data-type="bfs">
+                BFS
+            </button>
+
+            <button class="algo" data-type="dfs">
+                DFS
+            </button>
+
+            <button class="algo" data-type="dijkstra">
+                Dijkstra
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🔢 Sorting</h4>
+
+            <button class="algo" data-type="bubble">
+                Bubble Sort
+            </button>
+
+            <button class="algo" data-type="selection">
+                Selection Sort
+            </button>
+
+            <button class="algo" data-type="insertion">
+                Insertion Sort
+            </button>
+
+            <button class="algo" data-type="merge">
+                Merge Sort
+            </button>
+
+            <button class="algo" data-type="quick">
+                Quick Sort
+            </button>
+
+            <button class="algo" data-type="heap">
+                Heap Sort
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🔍 Searching</h4>
+
+            <button class="algo" data-type="linear">
+                Linear Search
+            </button>
+
+            <button class="algo" data-type="binary">
+                Binary Search
+            </button>
+
+        </div>
+
+
+        <div class="category">
+
+            <h4>🧮 Dynamic Programming</h4>
+
+            <button class="algo" data-type="fibonacci">
+                Fibonacci
+            </button>
+
+            <button class="algo" data-type="knapsack">
+                0/1 Knapsack
+            </button>
+
+            <button class="algo" data-type="lcs">
+                Longest Common Subsequence
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <section class="hero">
+
+            <div>
+
+                <div class="eyebrow">
+                    INTERACTIVE DSA LAB
+                </div>
+
+                <h1 id="title">
+                    Array Operations
+                </h1>
+
+                <p id="description">
+                    Visualize and understand array operations.
+                </p>
+
+            </div>
+
+            <div class="status">
+                ● <span id="status">Ready</span>
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+
+        <section class="input-panel">
+
+            <div>
+
+                <label>Input</label>
+
+                <input
+                    id="input"
+                    value="40,10,30,20,50,15"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Value</label>
+
+                <input
+                    id="value"
+                    type="number"
+                    value="30"
+                >
+
+            </div>
+
+
+            <button id="apply">
+                Generate
+            </button>
+
+        </section>
+
+
+        <!-- VISUALIZER -->
+
+        <section class="visual-card">
+
+            <div class="visual-header">
+
+                <h2>Visualization</h2>
+
+                <span id="step">
+                    Step 0
+                </span>
+
+            </div>
+
+
+            <div id="visualization">
+
+            </div>
+
+
+            <div class="controls">
+
+                <button id="reset">
+                    ↻ Reset
+                </button>
+
+                <button id="play">
+                    ▶ Play
+                </button>
+
+                <button id="pause">
+                    ⏸ Pause
+                </button>
+
+                <button id="next">
+                    ⏭ Step
+                </button>
+
+            </div>
+
+
+            <div class="speed">
+
+                🐢
+
+                <input
+                    id="speed"
+                    type="range"
+                    min="100"
+                    max="1500"
+                    value="500"
+                >
+
+                🚀
+
+            </div>
+
+        </section>
+
+
+        <!-- INFO -->
+
+        <section class="info">
+
+            <div class="card">
+
+                <h3>
+                    🧠 Current Operation
+                </h3>
+
+                <p id="operation">
+                    Ready to visualize.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📊 Complexity
+                </h3>
+
+                <div class="complexity">
+
+                    <div>
+                        <span>Best</span>
+                        <b id="best">-</b>
+                    </div>
+
+                    <div>
+                        <span>Average</span>
+                        <b id="average">-</b>
+                    </div>
+
+                    <div>
+                        <span>Worst</span>
+                        <b id="worst">-</b>
+                    </div>
+
+                    <div>
+                        <span>Space</span>
+                        <b id="space">-</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CODE -->
+
+        <section class="code-card">
+
+            <div class="code-title">
+
+                <h2>💻 Algorithm</h2>
+
+                <span>JavaScript</span>
+
+            </div>
+
+            <pre id="code">
+Select an algorithm to see its implementation.
+            </pre>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
