@@ -1,4 +1,4 @@
-# ⚡ AlgoVision — Interactive DSA Visualizer  https://algo123.netlify.app/
+ AlgoVision — Interactive DSA Visualizer  https://algo123.netlify.app/
 
 > **Learn Data Structures and Algorithms by watching them work.**
 
@@ -6,7 +6,6 @@ AlgoVision is an interactive web-based **Data Structures and Algorithms (DSA) Vi
 
 Instead of only reading algorithm code, users can visually observe how data changes step-by-step, understand algorithm complexity, control the execution speed, and study the corresponding implementation.
 
----
 
 ## 🚀 Features
 
